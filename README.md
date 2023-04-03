@@ -6,7 +6,7 @@
   extract 3D snippet-level features: python extract_rgb_feat.py <br>
   extract audio samples from videos: python extract_audio.py <br>
   extract audio features: python wave audio_feature_extractor.py <br>
-  (You can also extract audio features with [link](https://github.com/qiuqiangkong/audioset_tagging_cnn))
+  (You can also extract audio features with [PANNs](https://github.com/qiuqiangkong/audioset_tagging_cnn))
   
  ### Requirements
 ```bash
