@@ -96,7 +96,7 @@ def main():
     # Training settings
     parser = argparse.ArgumentParser(description='PyTorch Implementation of Audio-Visual Video Parsing')
     parser.add_argument(
-        "--dataset", type=str, default='earthquake', help="audio dir")
+        "--dataset", type=str, default='earthquake', help="earthquake or AVE")
     parser.add_argument(
         "--audio_dir", type=str, default='/data/yss/dataset/AVDPR/compress/vggish/', help="audio dir")
     parser.add_argument(
@@ -167,9 +167,7 @@ def main():
         model = MMIL_Net().to('cuda')
     else:
         raise ('not recognized')
-    
-    # if not os.path.exists(args.log):
-    #     os.makedirs(args.log)
+
     save_checkpoint = '{}-{}'.format(args.checkpoint, args.K)
     
     log_file = './logs/IAVF-K{}_{}.txt'.format(args.K, args.dataset)
@@ -225,7 +223,6 @@ def main():
                     print("for training data")
                     F = eval(model, val_loader_train, args.label_val,args.mode, epoch)
                     print("for testing data")
-                    # pdb.set_trace()
                     F = eval(model, val_loader, args.label_val,args.mode, epoch)
                     if F >= best_F:
                         best_F = F
