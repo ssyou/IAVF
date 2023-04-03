@@ -8,8 +8,18 @@
   extract audio features: python wave audio_feature_extractor.py <br>
   (You can also extract audio features with [PANNs](https://github.com/qiuqiangkong/audioset_tagging_cnn))
   
- ### Requirements
+### Requirements
 ```bash
-conda env create name environment_name -f IAVF.yml
+conda env create -f IAVF.yml
 ```
 
+### Incremental Audio-Visual Fusion 
+Training
+```bash
+python main.py --gpu 0 --K 1 --dataset AVE --mode train --batch-size 32 --epochs 10 
+```
+
+Testing
+```bash
+python main.py --gpu 0 --K 1 --dataset AVE --mode test --batch-size 32 --epochs 10 
+```
