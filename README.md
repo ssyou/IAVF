@@ -1,4 +1,4 @@
-### Incremental Audio-Visual Fusion for Person Recognition in Earthquake Scene
+# Incremental Audio-Visual Fusion for Person Recognition in Earthquake Scene
 <div align="center">
   <img src="https://github.com/ssyou/IAVF/blob/main/figs/framework.png">
 </div>
